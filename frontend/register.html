@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayıt Ol</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body class="register-page">
+  <div class="register-wrapper">
+    <div class="register-card">
+      <div class="register-left">
+        <p class="register-badge">MHRS Plus</p>
+
+        <h1>Yeni hesap oluştur</h1>
+
+        <p class="register-subtitle">
+          Sisteme kayıt olarak randevu almaya başlayın. Güvenli, hızlı ve düzenli bir sağlık
+          randevu deneyimi sizi bekliyor.
+        </p>
+
+        <form id="registerForm" class="register-form" novalidate>
+          <div class="register-grid">
+            <div class="input-group">
+              <label for="first_name">Ad</label>
+              <input type="text" id="first_name" placeholder="Adınızı girin" required />
+            </div>
+
+            <div class="input-group">
+              <label for="last_name">Soyad</label>
+              <input type="text" id="last_name" placeholder="Soyadınızı girin" required />
+            </div>
+
+            <div class="input-group">
+              <label for="tc_no">T.C. Kimlik No</label>
+              <input
+                type="text"
+                id="tc_no"
+                placeholder="11 haneli T.C. no"
+                maxlength="11"
+                inputmode="numeric"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="phone">Telefon</label>
+              <input
+                type="text"
+                id="phone"
+                placeholder="05xx xxx xx xx"
+                maxlength="11"
+                inputmode="numeric"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="email">E-posta</label>
+              <input type="email" id="email" placeholder="ornek@mail.com" required />
+            </div>
+
+            <div class="input-group">
+              <label for="password">Şifre</label>
+              <input type="password" id="password" placeholder="Şifrenizi girin" required />
+            </div>
+          </div>
+
+          <p id="registerMessage" class="form-message"></p>
+
+          <button type="submit" class="register-submit-btn">Kayıt Ol</button>
+        </form>
+
+        <p class="register-bottom-text">
+          Zaten hesabın var mı? <a href="login.html">Giriş Yap</a>
+        </p>
+      </div>
+
+      <div class="register-right">
+        <div class="register-info-box">
+          <h2>Kolay Başlangıç</h2>
+          <p>Bilgilerini doldur, hesabını oluştur ve hemen randevu sistemine giriş yap.</p>
+        </div>
+
+        <div class="register-info-box">
+          <h2>Güvenli Erişim</h2>
+          <p>JWT tabanlı oturum yapısı ile kullanıcı girişleri güvenli şekilde yönetilir.</p>
+        </div>
+
+        <div class="register-info-box">
+          <h2>Modern Deneyim</h2>
+          <p>Açık mor tonlarında tasarlanmış sade ve düzenli bir arayüz ile işlemlerini rahatça yap.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/api.js"></script>
+  <script src="./assets/js/auth.js"></script>
+</body>
+</html>

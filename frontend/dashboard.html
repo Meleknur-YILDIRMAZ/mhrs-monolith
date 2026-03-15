@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body class="dashboard-page">
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar">
+      <div class="dashboard-logo">MHRS<span>Plus</span></div>
+
+      <nav class="dashboard-nav">
+        <a href="dashboard.html" class="dashboard-link active">Panel</a>
+        <a href="appointments.html" class="dashboard-link">Randevularım</a>
+        <a href="search.html" class="dashboard-link">Arama</a>
+      </nav>
+
+      <button id="logoutBtn" class="dashboard-logout-btn">Çıkış Yap</button>
+    </aside>
+
+    <main class="dashboard-main">
+      <section class="dashboard-hero">
+        <div class="dashboard-hero-left">
+          <p class="dashboard-badge">MHRS Kontrol Merkezi</p>
+          <h1>Sağlık randevularını kolayca yönetin</h1>
+          <p class="dashboard-hero-text">
+            Yeni randevu oluşturabilir, mevcut randevularını görüntüleyebilir
+            ve hastane araması yapabilirsin.
+          </p>
+        </div>
+
+        <div class="dashboard-hero-right">
+          <div class="dashboard-mini-stat">
+            <span>Hızlı Erişim</span>
+            <strong>3 işlem</strong>
+          </div>
+          <div class="dashboard-mini-stat">
+            <span>Panel Durumu</span>
+            <strong>Aktif</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-cards">
+        <div class="dashboard-card dashboard-card-primary">
+          <div class="dashboard-card-top">
+            <div class="dashboard-icon-circle">+</div>
+            <span class="dashboard-card-tag">İşlem</span>
+          </div>
+          <h2>Yeni Randevu</h2>
+          <p>Hemen yeni bir randevu oluştur ve uygun tarih-saat seçimini yap.</p>
+          <a href="appointments.html" class="dashboard-card-btn primary">Oluştur</a>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-card-top">
+            <div class="dashboard-icon-circle">≡</div>
+            <span class="dashboard-card-tag">Takip</span>
+          </div>
+          <h2>Randevularım</h2>
+          <p>Aktif randevularını görüntüle, detaylarını incele ve yönet.</p>
+          <a href="appointments.html" class="dashboard-card-btn secondary">Listele</a>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-card-top">
+            <div class="dashboard-icon-circle">⌕</div>
+            <span class="dashboard-card-tag">Arama</span>
+          </div>
+          <h2>Hastane Arama</h2>
+          <p>Elasticsearch ile hastane, bölüm ve doktor aramasını hızlıca yap.</p>
+          <a href="search.html" class="dashboard-card-btn secondary">Ara</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./assets/js/auth.js"></script>
+  <script src="./assets/js/dashboard.js"></script>
+</body>
+</html>

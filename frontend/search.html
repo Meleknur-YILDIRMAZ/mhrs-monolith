@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arama</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body class="dashboard-page">
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar">
+      <div class="dashboard-logo">MHRS<span>Plus</span></div>
+
+      <nav class="dashboard-nav">
+        <a href="dashboard.html" class="dashboard-link">Panel</a>
+        <a href="appointments.html" class="dashboard-link">Randevularım</a>
+        <a href="search.html" class="dashboard-link active">Arama</a>
+      </nav>
+
+      <button id="logoutBtn" class="dashboard-logout-btn">Çıkış Yap</button>
+    </aside>
+
+    <main class="dashboard-main">
+      <section class="dashboard-hero">
+        <div class="dashboard-hero-left">
+          <p class="dashboard-badge">Akıllı Arama</p>
+          <h1>Hastane, doktor ve bölüm aramasını tek yerden yap</h1>
+          <p class="dashboard-hero-text">
+            Hastane adı, bölüm adı, şehir veya doktor bilgisi yazarak arama yapabilir,
+            eşleşen kayıtları hızlıca görüntüleyebilirsin.
+          </p>
+        </div>
+
+        <div class="dashboard-hero-right">
+          <div class="dashboard-mini-stat">
+            <span>Arama Türü</span>
+            <strong>Elasticsearch</strong>
+          </div>
+          <div class="dashboard-mini-stat">
+            <span>Durum</span>
+            <strong>Hazır</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-panel-card">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Arama Paneli</p>
+            <h2>Hastane / Doktor / Bölüm Ara</h2>
+          </div>
+        </div>
+
+        <div class="search-toolbar">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Örn: Kardiyoloji, Kütahya, Ahmet"
+          />
+          <button id="searchBtn" class="search-submit-btn">Ara</button>
+        </div>
+
+        <div id="searchResults" class="search-results"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./assets/js/api.js"></script>
+  <script src="./assets/js/auth.js"></script>
+  <script src="./assets/js/search.js"></script>
+</body>
+</html>
