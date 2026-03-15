@@ -1,10 +1,7 @@
-version: "3.9"
-
 services:
   backend:
     build:
       context: ./backend
-    container_name: mhrs_backend
     env_file:
       - ./backend/.env
     depends_on:
@@ -17,7 +14,6 @@ services:
 
   frontend:
     image: nginx:alpine
-    container_name: mhrs_frontend
     depends_on:
       - backend
     restart: always
@@ -29,7 +25,6 @@ services:
 
   mongodb:
     image: mongo:7.0
-    container_name: mhrs_mongodb
     restart: always
     ports:
       - "27017:27017"
@@ -38,7 +33,6 @@ services:
 
   rabbitmq:
     image: rabbitmq:3-management
-    container_name: mhrs_rabbitmq
     restart: always
     ports:
       - "5672:5672"
@@ -46,7 +40,6 @@ services:
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.14.0
-    container_name: mhrs_elasticsearch
     restart: always
     environment:
       - discovery.type=single-node
